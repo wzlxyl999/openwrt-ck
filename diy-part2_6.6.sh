@@ -101,10 +101,6 @@ git clone --depth=1 -b master https://github.com/xiangfeidexiaohuo/extra-ipk pac
 \cp -rf package/lean/extra-ipk/op-socat package/lean/socat
 \cp -rf package/lean/extra-ipk/op-homebox package/lean/homebox
 \rm -rf package/lean/extra-ipk
-\rm -rf feeds/packages/net/adguardhome feeds/luci/applications/luci-app-adguardhome
-git clone --depth=1 -b main https://github.com/sirpdboy/sirpdboy-package package/lean/sirpdboy-package
-\cp -rf package/lean/sirpdboy-package/adguardhome package/lean
-\cp -rf package/lean/sirpdboy-package/luci-app-adguardhome package/lean
 \rm -rf package/lean/sirpdboy-package
 git clone --depth=1 -b main https://github.com/linkease/openwrt-app-actions package/lean/openwrt-app-actions
 \cp -rf package/lean/openwrt-app-actions/applications/luci-app-multiaccountdial package/lean
