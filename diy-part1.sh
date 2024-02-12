@@ -11,3 +11,4 @@ sed -i "s/src-git-full-full/src-git-full/g" feeds.conf.default
 #echo 'src-git-full helloworld https://github.com/fw876/helloworld.git;main' >> feeds.conf.default
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2/tree/main/luci-app-passwall2' feeds.conf.default
