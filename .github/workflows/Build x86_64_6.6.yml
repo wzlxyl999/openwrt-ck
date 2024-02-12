@@ -181,7 +181,7 @@ jobs:
       uses: softprops/action-gh-release@master
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         files: ./firmware/*.*
         name: ${{ env.date1 }}_${{ matrix.target.arch }}_${{ matrix.target.kernel }}
@@ -191,7 +191,7 @@ jobs:
     - name: 删除workflow工作流
       uses: Mattraks/delete-workflow-runs@main
       with:
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        token: ${{ secrets.REPO_TOKEN }}
         repository: ${{ github.repository }}
         retain_days: 1
         keep_minimum_runs: 1
@@ -200,7 +200,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@master
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         keep_latest: 5
         delete_tags: true
