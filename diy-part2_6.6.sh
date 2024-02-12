@@ -78,9 +78,6 @@ curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/system.lua > feeds/
 git clone --depth=1 -b master https://github.com/sbwml/luci-app-alist package/lean/alist
 \rm -rf feeds/packages/net/mosdns feeds/luci/applications/luci-app-mosdns feeds/packages/utils/v2dat
 git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/lean/mosdns
-\rm -rf feeds/luci/applications/luci-app-adbyby-plus
-git clone --depth=1 -b main https://github.com/ywt114/luci-app-adbyby-plus-lite package/lean/luci-app-adbyby-plus-lite
-\rm -rf feeds/packages/net/msd_lite
 git clone --depth=1 -b main https://github.com/ywt114/luci-app-msd_lite package/lean/msd_lite
 git clone --depth=1 -b master https://github.com/ywt114/luci-app-gpsysupgrade package/lean/luci-app-gpsysupgrade
 \rm -rf feeds/packages/net/smartdns feeds/luci/applications/luci-app-smartdns
@@ -94,7 +91,6 @@ git clone --depth=1 -b master https://github.com/sirpdboy/luci-app-autotimeset p
 sed -i 's/control"/system"/g' package/lean/luci-app-autotimeset/luasrc/controller/autotimeset.lua
 sed -i 's/control]/system]/g' package/lean/luci-app-autotimeset/luasrc/view/autotimeset/log.htm
 git clone --depth=1 -b master https://github.com/kenzok8/openwrt-packages package/lean/openwrt-packages
-\cp -rf package/lean/openwrt-packages/luci-app-openclash package/lean/small
 \rm -rf package/lean/openwrt-packages
 \rm -rf feeds/packages/net/socat feeds/luci/applications/luci-app-socat
 git clone --depth=1 -b master https://github.com/xiangfeidexiaohuo/extra-ipk package/lean/extra-ipk
@@ -103,7 +99,6 @@ git clone --depth=1 -b master https://github.com/xiangfeidexiaohuo/extra-ipk pac
 \rm -rf package/lean/extra-ipk
 \rm -rf package/lean/sirpdboy-package
 git clone --depth=1 -b main https://github.com/linkease/openwrt-app-actions package/lean/openwrt-app-actions
-\cp -rf package/lean/openwrt-app-actions/applications/luci-app-multiaccountdial package/lean
 \rm -rf package/lean/openwrt-app-actions
 git clone --depth=1 -b main https://github.com/linkease/istore package/lean/istore
 # sed -i 's/+luci-lib-ipkg/+luci-base/g' package/lean/istore/luci/luci-app-store/Makefile
