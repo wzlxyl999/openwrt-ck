@@ -9,3 +9,5 @@ sed -i "s/src-git-full-full/src-git-full/g" feeds.conf.default
 
 # 添加feeds源
 #echo 'src-git-full helloworld https://github.com/fw876/helloworld.git;main' >> feeds.conf.default
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
